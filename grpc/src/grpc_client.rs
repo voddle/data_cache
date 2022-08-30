@@ -44,7 +44,6 @@ impl Client {
                 });
                 let sasl = rx.recv().await;
                 let result = f(client);
-
                 //handler.join().expect("The auth thread has panicked");
                 return Ok(result.await);
             }
